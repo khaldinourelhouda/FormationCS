@@ -1,0 +1,41 @@
+body {padding-top:20px;}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 10%;
+  }
+.header{
+      height: 180px;
+      width: 1350px;
+
+  }
+
+.text-center{
+      font-size: 16px;
+      /*margin-left: 50px;*/
+      text-align: center;
+  }
+
+form{
+    background-color: #f3f2f2;
+}
+label{
+    text-align: center;
+    margin-left: 80px;
+}
+.form-control{
+    margin-left: 80px;
+  
+}
+button{
+    float: center;
+}
+.form-check-label{
+ margin-left: 320px;
+ 
+}
+.form-check-input{
+padding: 10px;
+}

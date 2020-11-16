@@ -1,0 +1,164 @@
+<br>
+<img src="/assets/images/bancabc.png" class="center">
+<br>
+<img src="/assets/images/investir.jpg"  class="header">
+<br>
+
+<form [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+    <br>
+    <legend class="text-center">Laissez-nous vos coordonnées, un conseiller va vous contacter très vite !</legend>
+    <br>
+    <br>
+
+    <div class="row " >
+      <div class="col-sm-5 checkbox-radios" >
+          <div class="form-check form-check-radio">
+            <label class="form-check-label">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadio1"
+                id="exampleRadio1"
+                (click)=validechoix()
+
+                value="Particulier"
+               
+              />
+              <span class="form-check-sign"></span> Particulier
+            </label>
+          </div>
+          
+          </div>
+      <div class="col-sm-5 form-check-radio " >
+          <div class="form-check form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+             
+              name="exampleRadio1"
+                      id="exampleRadio1"
+                      (click)=validechoix1()
+            />
+            
+            <span class="form-check-sign"></span> Profesionnel
+          </label>
+        </div>
+       </div>
+      </div>
+      <br> <br>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Nom</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="nom"  formControlName="nom"   placeholder="Nom">
+      </div>
+    </div>
+  <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Prénom</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="prenom"  formControlName="prenom"    ngModul="prenom" placeholder="Prenom">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Pays </label>
+        <div class="col-sm-8">
+        
+          <select class="form-control" formControlName="ville" >
+           
+            <optgroup label="Pays">
+                <option  *ngFor="let ville of villes" value="{{ville.id}}" [label]="ville.titre" ></option>
+                
+            </optgroup>
+            
+          </select>
+      
+        
+       </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Numéro de téléphone </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="telephone"  formControlName="telephone"  placeholder="Votre numéro de téléphone">
+        </div>
+      </div> 
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Adresse mail </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="email" formControlName="email"  placeholder="votre adresse mail">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Societe </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="societe" formControlName="societe" placeholder="Societe">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Fonction </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="fonction"  formControlName="fonction"  placeholder="Fonction">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Formation </label>
+        <div class="col-sm-8">
+        
+          <select class="form-control"  formControlName="formation" >
+           
+            <optgroup label="Nos Formations">
+                <option  *ngFor="let formation of formations"  value="{{formation.id}}" [label]="formation.titre"> </option>
+                
+            </optgroup>
+            
+          </select>
+      
+        
+       </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Mode de Formation </label>
+        <div class="col-sm-8">
+        
+          <select class="form-control"  formControlName="presence" >
+           
+            <optgroup label="Mode de Formation">
+                <option >Présentiel </option>
+                <option >En ligne </option>
+                
+            </optgroup>
+            
+          </select>
+      
+        
+       </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Votre Message </label>
+        <div class="col-sm-8">
+          <textarea type="text" class="form-control" id="message"  formControlName="message"  placeholder="Votre message">
+          </textarea>
+        </div>
+      </div>
+    
+      
+
+      <div class="form-group row">
+         <p style ="color:red;margin-left:400px"> # Le télétravail est fortement conseille à cause de la pandémie</p>
+      </div>
+      
+
+        <div class="col-md-10 text-center">
+          <button type="submit" class="btn btn-primary ">Envoyée</button>
+        </div>
+      </form>
+
+
+      
+
+    
+
+
+  
+
+
+
